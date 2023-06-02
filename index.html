@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTaskTwo</title>
+</head>
+<body>
+    <p class="text">Лебедев Семён Владимирович</p>
+    <a href="https://smnlbdv.github.io/MyPortfolio/">Моё портфолио</a>
+    <img src="image.jpg" alt="" style="width: 300px; height: 200px;" onclick="removeElement(this)">
+    <button onclick="oneClick()" type="">Применить стили</button>
+    <button onclick="doc()" >DoctYPE</button>
+    <script>
+        const text = document.querySelector('.text')
+        // 1 задание ******************
+        function doc() {
+            setTimeout(() => {
+            document.write(document.doctype)
+            },5000)
+        }
+
+        function removeElement(e) {
+            e.remove();
+        }
+        // 2 задание ******************
+        function oneClick() {
+            text.style.color = "red";
+            text.style.background = "white";
+            text.style.fontFamily = "Veranda";
+            text.style.fontSize = "10px";
+            text.style.border = "1px solid blue";
+        }
+        // 3 задание ******************
+        setInterval(() => {
+            alert(window.location.href)
+        }, 4000)
+    </script>
+</body>
+</html>
